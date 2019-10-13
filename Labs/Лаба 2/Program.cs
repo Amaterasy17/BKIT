@@ -10,6 +10,13 @@ namespace Лаба_2
     {
         static void Main(string[] args)
         {
+            Square a = new Square(4);
+            Circle c = new Circle(10);
+            Rectangle b = new Rectangle(5, 6);
+            a.Print();
+            b.Print();
+            c.Print();
+            Console.ReadKey();
         }
     }
 }

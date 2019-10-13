@@ -28,7 +28,7 @@ namespace Лаба_2
         public override string ToString()
         {
             double a = Area();
-            return "Длина : " + L.ToString() + "Высота: " + H.ToString() + "Площадь: " + a.ToString();
+            return "Длина: " + L.ToString() + " Высота: " + H.ToString() + " Площадь: " + a.ToString();
         }
 
         public void Print()

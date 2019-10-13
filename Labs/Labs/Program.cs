@@ -97,6 +97,7 @@ namespace Labs
                     Console.WriteLine("Корень любой");
                     Console.ForegroundColor = ConsoleColor.White;
                     Console.WriteLine("Конец программы :(");
+                Console.ReadKey();
                     return;
                 }
                 if (A == 0 && B != 0)
@@ -108,9 +109,12 @@ namespace Labs
                         Console.ForegroundColor = ConsoleColor.Green;
                         y1 = Math.Abs(Math.Sqrt(t));
                         y2 = -1 * Math.Abs(Math.Sqrt(t));
+                    if(y1==y2)
+                        Console.WriteLine($"Корни уравнения:\n{y1}");
+                    else
                         Console.WriteLine($"Корни уравнения:\n{y1}\n{y2} ");
 
-                    }
+                }
                     else
                     {
                         Console.ForegroundColor = ConsoleColor.Red;
@@ -120,7 +124,8 @@ namespace Labs
                     }
                     Console.ForegroundColor = ConsoleColor.White;
                     Console.WriteLine("Конец программы :(");
-                    return;
+                Console.ReadKey();
+                return;
                 }
                 if (A != 0 && B == 0)
                 {
@@ -132,7 +137,9 @@ namespace Labs
                         t1 = Math.Abs(Math.Sqrt(t));
                         y1 = Math.Abs(Math.Sqrt(t1));
                         y2 = -1 * Math.Abs(Math.Sqrt(t1));
-                        Console.WriteLine($"Корни уравнения:\n{y1}\n{y2} ");
+                    if(y1==y2)
+                        Console.WriteLine($"Корни уравнения:\n{y1}");
+                    else Console.WriteLine($"Корни уравнения:\n{y1}\n{y2} ");
 
                     }
                     else
@@ -142,7 +149,8 @@ namespace Labs
                     }
                     Console.ForegroundColor = ConsoleColor.White;
                     Console.WriteLine("Конец программы :(");
-                    return;
+                Console.ReadKey();
+                return;
                 }
                 if (A == 0 && B == 0 && C != 0)
                 {
@@ -150,7 +158,8 @@ namespace Labs
                     Console.WriteLine("Решений нет");
                     Console.ForegroundColor = ConsoleColor.White;
                     Console.WriteLine("Конец программы :(");
-                    return;
+                Console.ReadKey();
+                return;
                 }
                 double D;
                 D = Math.Pow(B, 2) - 4 * A * C;
@@ -185,10 +194,21 @@ namespace Labs
                 {
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine("Корни уравнения: ");
-                    if (z)
-                        Console.WriteLine($"{y1} \n{y2} ");
-                    if (x)
+                if (z)
+                {
+                    if(y1==y2)
+                         Console.WriteLine($"{y1}");
+                    else
+                    Console.WriteLine($"{y1} \n{y2} ");
+                }
+                if (x)
+                {
+
+                    if (y3 == y4)
+                        Console.WriteLine($"{y3}");
+                    else
                         Console.WriteLine($"{y3} \n{y4} ");
+                }
                 }
                 else
                 {
@@ -200,37 +220,7 @@ namespace Labs
                 Console.WriteLine("Конец программы :(");
                 Console.ReadKey();
             }
-            static bool Proverka(string str)
-            {
-                int i = 0;
-                int a = 0;
-                for (i = 0; i < str.Length; ++i)
-                {
-                    if ((i == 0) && ((str[i] < '0') || (str[i] > '9')) && (str[i] != '-'))
-                    {
-                        Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine("Ошибка!!!");
-                        return false;
-                    }
-                    if (((str[i] < '0') || (str[i] > '9')) && (int)str[i] != 44 && (str[i] != '-') || ((str[i] == '-') && (i > 0)))
-                    {
-                        Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine("Ошибка!!!");
-                        return false;
-                    }
-                    if (str[i] == ',')
-                    {
-                        ++a;
-                    }
-                }
-                if (a > 1)
-                {
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("Ошибка!!!");
-                    return false;
-                }
-                return true;
-            }
+           
         }
     }
 

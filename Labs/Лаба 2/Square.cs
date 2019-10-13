@@ -20,7 +20,7 @@ namespace Лаба_2
         public override string ToString()
         {
             double a = Area();
-            return "Длина стороны квадрата: " + L.ToString() + "Площадь: " + a.ToString() ;
+            return "Длина стороны квадрата: " + L.ToString() + " Площадь: " + a.ToString() ;
         }
         public new void Print()
         {
