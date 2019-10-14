@@ -1,1 +1,1 @@
-'Labs is Лаба_1'
+'Labs is Laba_1'
