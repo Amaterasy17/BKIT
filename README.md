@@ -1,2 +1,1 @@
-# BKIT
-some programming
+'Labs is Лаба_1'
