@@ -25,7 +25,8 @@ namespace Лаба_2
         {
             double a;
             a = Area();
-            return "Радиус круга:"+Rad.ToString() + " Площадь: "+ a.ToString();
+            string output = String.Format($"{a:N3}");
+            return "Радиус круга:" + Rad.ToString() + " Площадь: "+ output;
         }
 
         public  void Print()
