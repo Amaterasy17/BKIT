@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Лаба_2
 {
-    class Rectangle : GeomFigure,IPrint
+    public class Rectangle : GeomFigure,IPrint
     {
 
         public double L

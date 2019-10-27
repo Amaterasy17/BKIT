@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Лаба_2
 {
-    class Circle : GeomFigure,IPrint
+    public class  Circle : GeomFigure,IPrint
     {
         public double Rad
         {
-            get; set;
+             get; set;
         }
         public override double Area()
         {

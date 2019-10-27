@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Лаба_2
 {
-    class Square : Rectangle,IPrint
+    public class Square : Rectangle,IPrint
     {
         public override double Area()
         {
