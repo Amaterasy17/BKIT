@@ -41,6 +41,20 @@ namespace Lab_3
             matrix[0, 1, 0] = sq;
             matrix[0, 0, 1] = rec;
             Console.WriteLine(matrix.ToString());
+            Stack<GeomFigure> x = new Stack<GeomFigure>();
+            x.Push(cir);
+            x.Push(sq);
+            x.Push(rec);
+           for(int i = x.Count; i>0;--i)
+            {
+                Console.WriteLine(x.Pop() + " ");
+            }
+            try
+            { Console.WriteLine(x.Pop() + " "); }
+            catch(ExcNULL e)
+            {
+                Console.WriteLine("Ошибка: "+ e.Message);
+            }
             Console.ReadKey();
         }
     }
