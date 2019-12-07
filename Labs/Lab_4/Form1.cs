@@ -45,8 +45,6 @@ namespace Lab_4
             //    listBox1.Items.Add(list3);
             //}
             //listBox1.EndUpdate();
-
-
         }
 
         private void button1_Click(object sender, EventArgs e)
