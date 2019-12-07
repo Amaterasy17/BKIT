@@ -57,6 +57,12 @@ namespace Lab_4
                 MessageBoxButtons message=new MessageBoxButtons();
                 message = MessageBoxButtons.OK;
             }
+            else if(a=="")
+            {
+                MessageBox.Show("Ошибка!!! Не введено слово");
+                MessageBoxButtons message = new MessageBoxButtons();
+                message = MessageBoxButtons.OK;
+            }
             else
             {
                 listBox1.BeginUpdate();
