@@ -79,5 +79,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Lab_5_%28Library%29\Lab_5_%28Library%29.csproj">
+      <Project>{afaeec1d-78da-4034-aaa1-7c63fc4a4371}</Project>
+      <Name>Lab_5_%28Library%29</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

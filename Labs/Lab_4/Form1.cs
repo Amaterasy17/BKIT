@@ -81,5 +81,59 @@ namespace Lab_4
             }
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string distance = textBox2.Text;
+            //int dist = Convert.ToInt32(distance);
+            int dist;
+            if(!Int32.TryParse(distance,out dist))
+            {
+                MessageBox.Show("Ошибка!!! Вы должны ввести число!");
+                MessageBoxButtons message = new MessageBoxButtons();
+                message = MessageBoxButtons.OK;
+                return;
+            }
+            string word = textBox3.Text;
+            if (list.Count <= 0)
+            {
+                MessageBox.Show("Ошибка!!! Не выбран файл для поиска");
+                MessageBoxButtons message = new MessageBoxButtons();
+                message = MessageBoxButtons.OK;
+                return;
+            }
+            if (distance == "")
+            {
+                MessageBox.Show("Ошибка!!! Не введено расстояние Левенштейна!");
+                MessageBoxButtons message = new MessageBoxButtons();
+                message = MessageBoxButtons.OK;
+                return;
+            }
+            if (word == "")
+            {
+                MessageBox.Show("Ошибка!!! Не введено слово для обработки!");
+                MessageBoxButtons message = new MessageBoxButtons();
+                message = MessageBoxButtons.OK;
+                return;
+            }
+            listBox2.BeginUpdate();
+            int i = 0;
+           foreach(string item in list)
+            {
+                if (Lab_5__Library_.Class1.Distance(item, word) <= dist)
+                {
+                    listBox2.Items.Add(item);
+                }
+                else
+                    ++i;
+            }
+            listBox2.EndUpdate();
+            if (listBox2.Items.Count == 0 || i==list.Count)
+            {
+                listBox2.BeginUpdate();
+                listBox2.Items.Add("Подобных слов нет");
+                listBox2.EndUpdate();
+            }
+        }
     }
 }
